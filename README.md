@@ -14,11 +14,11 @@
 
     ssh-copy-id -i ~/.ssh/id_rsa.pub pibox@pibox
 
-4. Projekt klonen
-
-    git clone https://github.com/xd23fe39/pibox.git
-
 1. Verzeichnis einrichten
 
     mkdir pibox
     chown pibox:pibox pibox
+
+1. Projekt klonen
+
+    git clone https://github.com/xd23fe39/pibox.git /var/pibox/
