@@ -24,4 +24,4 @@ uname -a
 id -a pibox
 _check id
 ls -l /var/pibox
-check /var/pibox 
+_check /var/pibox 
