@@ -34,14 +34,22 @@ Optional kann der Bootloader gesichert werden:
     # Sicherung des Bootloaders
     sudo dd if=/dev/sda of=mbr+grub_sicherung bs=512 count=63 
   
+Anschließend wird das Image wieder auf einen anderen Stick übertragen.
+
+## Image auf Speichermedium kopieren
+
+Sofern das neue Speichermedium autom. eingebunden wurde, muss dieses zuerst wieder ausgeworfen werden:
+
+    sudo umount /dev/sdh1
+
+Image auf Speichermedium kopieren
+
+    sudo dd if=~/pibox_complete.img of=/dev/sdh && sync
+      
 Falls die Zielpartition größer ist, kann ein resize ausgeführt werden:
 
     sudo resize2fs /dev/sdh1 
 
-Anschließend wird das Image wieder auf einen anderen Stick übertragen:
-
-    dd if=/home/me/image.img of=/dev/target && sync
-  
   
 
 
