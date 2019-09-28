@@ -10,6 +10,9 @@ Alle Anwendungen sind beendet und der Raspberry PI heruntergefahren
 
 ## Informationen über Quellmedium holen
 
+    # Gerätename herausfinden
+    df -h 
+    
     # Weitere Infos anlisten
     lsblk -l --output="NAME,SIZE,PHY-SEC,TYPE,LABEL" /dev/sdh 
   
@@ -27,9 +30,6 @@ Ein Image des USB Memorysticks soll auf einer Festplatte abgelegt und von dort a
     dd if=/dev/sdh1 of=~/pibox_partition.img
   
 Optional kann der Bootloader gesichert werden:
-
-    # Gerätename herausfinden
-    df -h 
   
     # Sicherung des Bootloaders
     sudo dd if=/dev/sda of=mbr+grub_sicherung bs=512 count=63 
