@@ -1,5 +1,9 @@
 # USB Memory Stick klonen
 
+Quellen:
+
+- https://wiki.ubuntuusers.de/dd/ 
+
 ## Voraussetzungen
 
 Alle Anwendungen sind beendet und der Raspberry PI heruntergefahren
