@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# PIBOX Project
+
+if [ $(id -u) != 0 ]; then
+    echo "Failure: Login as root."
+    exit -1
+fi
+
+sudo apt -y update 
+sudo apt -y upgrade
+
+echo "OK"
