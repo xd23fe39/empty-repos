@@ -13,5 +13,8 @@ fi
 
 sudo groupadd -g 55002 pibox
 sudo useradd -d /var/pibox -g pibox -u 55002 -p "$(password.pibox)" pibox
-sudo usermod -G dialout,sudo,audio,plugdev,lpadmin,scanner,users pibox
+sudo usermod -G dialout,sudo,audio,plugdev,lpadmin,scanner,users,pi pibox
+sudo chown -R pibox:pi /var/pibox/
+sudo chmod g+rw -R /var/pibox/
+
 echo "OK"
